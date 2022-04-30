@@ -1,6 +1,7 @@
 import React from "react";
 
-const Home = () => {
+const Home = (props) => {
+  console.warn("props", props)
   return (
     <div>
       <div className='add-to-cart'>
