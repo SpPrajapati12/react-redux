@@ -1,13 +1,11 @@
 import React from "react";
 
+
 const Home = (props) => {
-  console.warn("props", props)
+  console.warn("home", props)
   return (
     <div>
-      <div className='add-to-cart'>
-               <img src='https://w7.pngwing.com/pngs/15/271/png-transparent-computer-icons-online-shopping-shopping-cart-service-shopping-cart-icon-text-service-retail.png'/>
-           </div>
-      <h3>Home component</h3>
+      <h1>Home component</h1>
       <div className="cart-wrapper">
         <div className="img-wrapper item">
         <img src="https://clipart.info/images/ccovers/1503496387Apple-IPhone-7-128GB-Jet-Black-Mobile-Png.png"/>
@@ -19,7 +17,8 @@ const Home = (props) => {
           </span>
          </div>
         <div className="btn-wrapper item">
-          <button>Add To Cart</button>
+          <button onClick={() => props.addToCartHandler({price : 1000,name : 'iphone 11' })}>Add To Cart</button>
+          <button className="remove-class-btn" onClick={() => props.removeToCartHandler()}>Remove To Cart</button>
         </div>
       </div>
     </div>
